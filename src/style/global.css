@@ -1,0 +1,24 @@
+.cardz:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.cardz {
+  transition: 0.3s;
+}
+
+.userLink {
+  color: gray;
+  text-decoration: none;
+}
+
+.userLink:hover {
+  color: rgb(22, 90, 236);
+}
+
+.foto {
+  transition: transform 0.4s;
+}
+
+.foto:hover {
+  transform: scale(1.2) rotate(0.01deg);
+}
