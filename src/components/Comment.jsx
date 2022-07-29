@@ -17,14 +17,16 @@ const Comment = () => {
         <Loading />
       ) : (
         <>
-          <h5>Comment</h5>
+          <h5 className="text-light">Comment</h5>
           {data.map((comment, index) => {
             if (id == comment.postId) {
               return (
                 <div key={index} className="mb-4">
                   <Card>
                     <Card.Body>
-                      <Card.Title>{comment.email}</Card.Title>
+                      <Card.Title className="text-secondary">
+                        {comment.email}
+                      </Card.Title>
                       <Card.Subtitle> {comment.body}</Card.Subtitle>
                     </Card.Body>
                   </Card>

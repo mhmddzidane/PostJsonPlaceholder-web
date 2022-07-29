@@ -7,7 +7,7 @@ const Album = () => {
   const params = useParams();
   const id = params.userid;
 
-  const { data, loading, error } = useFetch(
+  const { data, loading } = useFetch(
     "https://jsonplaceholder.typicode.com/albums"
   );
 
@@ -21,7 +21,10 @@ const Album = () => {
             if (id == album.userId) {
               return (
                 <div key={index}>
-                  <h4 className="mt-4">Album Name : {album.title}</h4>
+                  <h4 className="mt-4 ">
+                    <span className="fw-bold">Album Name : </span>
+                    {album.title}
+                  </h4>
                   <PhotoList albumId={album.id} />
                 </div>
               );

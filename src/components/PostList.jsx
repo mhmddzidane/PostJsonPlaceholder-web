@@ -41,15 +41,15 @@ const PostList = () => {
             >
               <Card
                 className="mb-4 ms-4 cardz"
-                style={{ width: "20rem", height: "20rem" }}
+                style={{ width: "20rem", height: "21rem" }}
               >
                 <Link
                   to={`/detail/${post.id}`}
                   style={{ textDecoration: "none" }}
                 >
                   <Card.Body>
-                    <Card.Title className="text-dark">
-                      Title : {post.title}
+                    <Card.Title className="text-dark fw-bold">
+                      {post.title}
                     </Card.Title>
                     {users.map((user) => {
                       if (post.userId === user.id) {

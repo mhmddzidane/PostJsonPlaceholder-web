@@ -37,14 +37,14 @@ const DetailPostList = () => {
         <Loading />
       ) : (
         <div>
-          <h2>Title : {posts.title}</h2>
+          <h2 className="text-light fw-bolder">Title : {posts.title}</h2>
           {data?.map((user, index) => {
             if (posts.userId === user.id) {
               return (
                 <div key={index}>
-                  <h5>
+                  <h5 className="text-light fw-bold">
                     Posted by :{" "}
-                    <Link to={`/user/${user.id}`} className="userLink">
+                    <Link to={`/user/${user.id}`} className="userLink ">
                       {user.name}
                     </Link>
                   </h5>
@@ -52,7 +52,7 @@ const DetailPostList = () => {
               );
             }
           })}
-          <h4 className="mb-5">{posts.body}</h4>
+          <h4 className="mb-5 text-light">{posts.body}</h4>
           <Comment />
         </div>
       )}

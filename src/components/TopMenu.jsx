@@ -4,9 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 
 function TopMenu() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="/">Post App</Navbar.Brand>
+        <Navbar.Brand href="/" className="fw-bolder text-light">
+          POST APP
+        </Navbar.Brand>
       </Container>
     </Navbar>
   );
