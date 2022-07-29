@@ -26,7 +26,7 @@ const PhotoList = ({ albumId }) => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           dots: false,
           slidesToScroll: 1,
         },

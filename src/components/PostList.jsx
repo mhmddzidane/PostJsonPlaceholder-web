@@ -40,7 +40,7 @@ const PostList = () => {
               key={post.id}
             >
               <Card
-                className="mb-4 ms-4 cardz"
+                className="mb-4 mx-2 cardz"
                 style={{ width: "20rem", height: "21rem" }}
               >
                 <Link

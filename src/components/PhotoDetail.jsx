@@ -10,7 +10,6 @@ const PhotoDetail = () => {
   const { data, loading, error } = useFetch(
     `https://jsonplaceholder.typicode.com/photos/${id}`
   );
-  console.log(data);
 
   return (
     <>
