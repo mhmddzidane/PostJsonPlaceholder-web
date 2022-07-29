@@ -21,7 +21,12 @@ const PhotoDetail = () => {
             Title : <span className="text-secondary">{data.title}</span>
           </h3>
           <div className="mb-4 mt-4" style={{ cursor: "pointer" }}>
-            <img src={data.url} alt="Foto" className="foto" />
+            <img
+              src={data.url}
+              alt="Foto"
+              className="foto"
+              style={{ cursor: "pointer" }}
+            />
           </div>
         </div>
       )}

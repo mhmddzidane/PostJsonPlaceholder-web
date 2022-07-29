@@ -27,3 +27,13 @@
 .foto:hover {
   transform: scale(1.2) rotate(0.01deg);
 }
+
+@media screen and (max-width: 600px) {
+  * {
+    overflow-x: hidden;
+  }
+
+  .foto {
+    width: 100%;
+  }
+}
