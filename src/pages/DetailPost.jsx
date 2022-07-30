@@ -1,6 +1,5 @@
-import React from "react";
-import DetailPostList from "../components/DetailPostList";
 import { Card } from "react-bootstrap";
+import DetailPostList from "../components/DetailPost";
 
 const DetailPost = () => {
   return (

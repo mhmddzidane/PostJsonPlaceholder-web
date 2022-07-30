@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import Loading from "./Loading";
-import useFetch from "../hooks/useFetch";
+import Loading from "../Loading";
+import { getPhoto } from "../../action/getPhotoAction";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const PhotoList = ({ albumId }) => {
   const settings = {
@@ -34,17 +36,21 @@ const PhotoList = ({ albumId }) => {
     ],
   };
 
-  const { data, loading, error } = useFetch(
-    "https://jsonplaceholder.typicode.com/photos"
+  const { getPhotoResult, getPhotoLoading, getPhotoError } = useSelector(
+    (state) => state.PhotosReducer
   );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPhoto());
+  }, [dispatch]);
 
   return (
     <div>
-      {loading ? (
-        <Loading />
-      ) : (
+      {getPhotoResult ? (
         <Slider {...settings}>
-          {data.map((photo, index) => {
+          {getPhotoResult.map((photo, index) => {
             if (photo.albumId == albumId) {
               return (
                 <div key={index}>
@@ -56,6 +62,10 @@ const PhotoList = ({ albumId }) => {
             }
           })}
         </Slider>
+      ) : getPhotoLoading ? (
+        <Loading />
+      ) : (
+        <p>{getPhotoError ? getPhotoError : "error"}</p>
       )}
     </div>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import PhotoDetail from "../components/PhotoDetail";
 
 const DetailPhoto = () => {

@@ -1,6 +1,5 @@
-import React from "react";
-import PostList from "../components/PostList";
 import { Card } from "react-bootstrap";
+import Posts from "../components/Posts";
 
 const Post = () => {
   return (
@@ -8,7 +7,8 @@ const Post = () => {
       <h1 className="mb-4 mt-4 text-center">List post</h1>
       <Card className="mt-2 mb-4 bg-dark">
         <Card.Body>
-          <PostList />
+          {/* <PostList /> */}
+          <Posts />
         </Card.Body>
       </Card>
     </div>

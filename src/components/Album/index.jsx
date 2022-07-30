@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import PhotoList from "./PhotoList";
-import useFetch from "../hooks/useFetch";
-import Loading from "./Loading";
+import PhotoList from "../PhotoList";
+import useFetch from "../../hooks/useFetch";
+import Loading from "../Loading";
 
 const Album = () => {
   const params = useParams();

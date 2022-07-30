@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TopMenu from "./components/TopMenu";
-
 import DetailPhoto from "./pages/DetailPhoto";
 import DetailPost from "./pages/DetailPost";
 import DetailUser from "./pages/DetailUser";

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Card } from "react-bootstrap";
-import useFetch from "../hooks/useFetch";
-import Loading from "./Loading";
+import useFetch from "../../hooks/useFetch";
+import Loading from "../Loading";
 
 const Comment = () => {
   const { data, loading, error } = useFetch(
